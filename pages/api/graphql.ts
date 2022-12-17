@@ -12,19 +12,21 @@ import {
   ID,
 } from 'type-graphql';
 
-@ObjectType()
-export class Dog {
-  @Field(() => ID)
-  name: string | undefined;
-}
+import { DogsResolver } from '../../src/schema/dogs.resolver';
 
-@Resolver(Dog)
-export class DogsResolver {
-  @Query(() => [Dog])
-  dogs(): Dog[] {
-    return [{ name: 'Bo' }, { name: 'Lassie' }];
-  }
-}
+// @ObjectType()
+// export class Dog {
+//   @Field(() => ID)
+//   name: string | undefined;
+// }
+
+// @Resolver(Dog)
+// export class DogsResolver {
+//   @Query(() => [Dog])
+//   dogs(): Dog[] {
+//     return [{ name: 'Bo' }, { name: 'Lassie' }];
+//   }
+// }
 
 const schema = await buildSchema({
   resolvers: [DogsResolver],
