@@ -1,6 +1,23 @@
 # Steps
 
-- yarn create next-app next-gql-dogs
+## Setup next with typescript
+```s yarn create next-app next-gql-dogs```
+
+## Add graphql server
+
+- install
+```yarn add graphql apollo-server-micro```
+
+- add graphql api  graphql.ts
+``` yarn add micro```
+- schema setup
+    options
+        - apollo schema 
+        - graphql nexus
+        - TypeGraphQL
+    In this case, we choose TypeGraphQL.
+    ```yarn add class-validator type-graphql reflect-metadata```
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
